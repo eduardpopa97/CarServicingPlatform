@@ -1,0 +1,66 @@
+Partea de controllere:
+- implementarea operatiilor CRUD pentru tabelele de USERS, CARS, RESERVATIONS 
+  (DELETE doar pentru anularea unei rezervari)
+
+Partea de validari:
+- ora de start a rezervarii sa fie cel putin 08:00
+- ora de sfarsit a rezervarii sa fie cel mult 17:00
+- intervalul de lucru precizat la crearea rezervarii sa fie multiplu de 30 minute
+- intervalul destinat reparatiei sa fie multiplu de 10 minute
+
+- verificarea ca doua rezervari sa nu aiba intervale de timp care sa se suprapuna
+- un utilizator sau o masina care sunt pe disabled sa nu treaca prin aceeasi operatie de disable din nou
+- daca lipseste o valoare din cele doua puteri (cai putere / KW), aceasta sa se calculeze pe baza celeilate;
+  daca ambele valori sunt precizate atunci se va verifica egalitatea dintre acestea => in caz contrar un mesaj
+  de eroare este trimis, iar inserarea masinii in baza de date nu este permisa;
+  daca nicio valoare nu este precizata => mesaj de eroare
+
+- nu se vor putea face rezervari pentru masini sau persoane setate pe disable
+- nu se va putea face rezervare daca clientul nu detine masina pentru care doreste sa faca rezervarea
+  
+Functionalitati noi introduse:
+- identificarea utilizatorilor eligibili pentru un discount la o noua rezervare (criteriul ales este ca 
+  un utilizator sa aiba cel putin 3 vizite la service in ultimele 6 luni)
+- functia de aplicare a discountului (care marcheaza rezervarile anterioare pe baza carora s-a aplicat
+  discountul pentru a nu fi luate in considerare ulterior)
+  
+ Exemple testare Postman (JSON):
+ 
+ 1) USERS
+ 
+{
+	"USER_FIRST_NAME": "Eduard",
+	"USER_LAST_NAME": "Popa",
+	"USER_PHONE_NUMBERS": "0729110536",
+	"USER_MAIL": "edipopa@yahoo.com"
+}
+
+2) CARS
+
+{
+	"USER_ID": 3,
+	"CAR_REGISTRATION_NUMBER": "PH63ABC",
+	"CAR_CHASSIS_NUMBER": "5YJSA1DG9DFP14705",
+	"CAR_BRAND": "Ferrari",
+	"CAR_MODEL": "Ferrari 458 Italia",
+	"CAR_MANUFACTURING_YEAR": "2022",
+	"CAR_ENGINE_TYPE": "hybrid",
+	"CAR_ENGINE_CAPACITY": "1,984.86 cc",
+	"CAR_HORSEPOWER": "453",
+	"CAR_KW_POWER": "607"
+}
+
+3) RESERVATIONS
+
+{
+    "USER_ID": 3,
+    "CAR_ID": 3,
+    "RESERVATION_METHOD": "phone call",
+    "REQUIRED_ACTION": "oil change",
+    "RESERVATION_START_TIME": "2024-04-14T09:35:00",
+    "RESERVATION_END_TIME": "2024-04-14T10:05:00",
+    "DISCOVERED_PROBLEMS": "flat tyre",
+    "ACTION_TAKEN": "replace tyre",
+    "PROCESSING_TIME": 150
+}
+

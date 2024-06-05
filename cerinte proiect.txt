@@ -1,0 +1,57 @@
+Proiect interviu Internship Info World 2024
+
+
+Vă puteți alege dacă faceți proiectul de frontend sau cel de backend în funcție de poziția pentru care aplicați.
+
+Obiectiv principal: se va crea o platformă de gestionare a unui service auto.
+
+În această platformă vor fi mai multe secțiuni: administrare clienți, administrare piese și programări clienți.
+
+
+Administrare clienți
+
+Se vor putea adăuga, modifica și dezactiva clienții service-ului; idem și pentru mașinile acestora.
+
+Se vor salva datele relevante ale clientului: nume, prenume, număr/numere de telefon, email și datele legate de toate mașinile clienților.
+
+Clienții pot avea cel puțin 1 mașină, nu există un număr maxim. Mașinile vor avea date privind: numărul de înmatriculare, serie șasiu, marcă, model, anul fabricației, tip motorizare (diesel, benzină, hibrid, electric), capacitate motor, cai putere, kW putere (calculați din cai putere sau vice versa), etc.
+
+
+Programări clienți
+
+Clienții vor putea contacta service-ul pentru a se programa. Acest lucru se va face prin email, telefon sau personal. Aceasta informație se va salva în programare, pentru a se contacta (pe cât posibil) clientul folosindu-se aceeași modalitate.
+
+Clienții vor specifica pentru care mașină se face programarea, ce acțiune se va face pe mașină și administratorii vor alege intervalul de timp, care va fi în multiplu de 30 de minute, în intervalul de funcționare 8-17.
+
+
+Istoric service
+
+Pentru fiecare programare, atunci când se prezintă clientul cu mașina, se vor face următoarele acțiuni pe programare:
+
+Primire mașină - se vor nota problemele descoperite vizual (dacă e lovită, zgâriată, ce probleme menționează clientul, dacă a fost adusă pentru o verificare sau pentru revizie).
+Procesare mașină - se va nota ce operațiuni i s-au făcut mașinii, ce piese s-au schimbat, ce s-a reparat, ce alte probleme s-au depistat, dacă s-au reparat sau nu, etc.
+Cât a durat reparația efectivă în minute, multiplu de 10.
+
+
+
+Cerințe tehnice: 
+Dacă veți face partea de frontend:
+ideal se va folosi Angular 12+, dar orice alt framework de frontend este acceptat, alături de HTML5 și CSS sau SCSS, LESS, etc;
+să aveți un set de date de pornire salvate într-un JSON care să simuleze o bază de date;
+datele să se salveze tot în acel JSON pe măsură ce se schimbă;
+
+Dacă veți face partea de backend:
+ideal Node.js sau orice alt framework bazat pe JavaScript sau TypeScript;
+să aveți o bază de date locală sau să simulați baza printr-un JSON;
+să acceptați call-uri REST făcute din Postman pentru a simula apelurile din client.
+
+
+Se va acorda un plus în evaluare pentru o funcționalitate proprie, nouă, adusă proiectului.
+
+Evaluare: se va ține cont de calitatea, nu doar de cantitatea codului, de stilul de scris, etc.
+
+Nu ezitați să întrebați dacă aveți nelămuriri!
+
+
+
+Mult succes!
