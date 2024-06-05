@@ -1,3 +1,25 @@
+Obiectiv principal: o platforma de gestionare a unui service auto.
+In aceasta platforma vor fi mai multe sectiuni: administrare clienti, administrare piese si programari clienti.
+
+
+Administrare clienti:
+- Se vor putea adauga, modifica si dezactiva clientii service-ului; idem si pentru masinile acestora.
+- Se vor salva datele relevante ale clientului: nume, prenume, numar/numere de telefon, email si datele legate de toate masinile clientilor.
+- Clientii pot avea cel putin 1 masina, nu exista un numar maxim. Masinile vor avea date privind: numarul de inmatriculare, serie sasiu, marca, model, anul fabricatiei, tip motorizare (diesel, benzina, hibrid, electric), capacitate motor, cai putere, kW putere (calculati din cai putere sau vice versa), etc.
+
+
+Programari clienti:
+- Clientii vor putea contacta service-ul pentru a se programa. Acest lucru se va face prin email, telefon sau personal. Aceasta informatie se va salva in programare, pentru a se contacta (pe cat posibil) clientul folosindu-se aceeasi modalitate.
+- Clientii vor specifica pentru care masina se face programarea, ce actiune se va face pe masina si administratorii vor alege intervalul de timp, care va fi in multiplu de 30 de minute, in intervalul de functionare 8-17.
+
+
+Istoric service:
+- Pentru fiecare programare, atunci cand se prezinta clientul cu masina, se vor face urmatoarele actiuni pe programare:
+	1) Primire masina - se vor nota problemele descoperite vizual (daca e lovita, zgariata, ce probleme mentioneaza clientul, daca a fost adusa pentru o verificare sau pentru revizie).
+	2) Procesare masina - se va nota ce operatiuni i s-au facut masinii, ce piese s-au schimbat, ce s-a reparat, ce alte probleme s-au depistat, daca s-au reparat sau nu, etc.
+	3) Cat a durat reparatia efectiva in minute, multiplu de 10.
+
+
 Partea de controllere:
 - implementarea operatiilor CRUD pentru tabelele de USERS, CARS, RESERVATIONS 
   (DELETE doar pentru anularea unei rezervari)
